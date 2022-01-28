@@ -14,19 +14,19 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
+  m_Fog: 1
+  m_FogColor: {r: 0.7169812, g: 0.6045135, b: 0, a: 1}
+  m_FogMode: 1
   m_FogDensity: 0.01
   m_LinearFogStart: 0
-  m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.2901961, g: 0.54901963, b: 0.5215184, a: 1}
-  m_AmbientEquatorColor: {r: 0.10588235, g: 0.35686275, b: 0.32627037, a: 1}
-  m_AmbientGroundColor: {r: 0.07450981, g: 0.38984466, b: 0.39607844, a: 1}
-  m_AmbientIntensity: 1
-  m_AmbientMode: 1
+  m_LinearFogEnd: 2500
+  m_AmbientSkyColor: {r: 1, g: 0.95454544, b: 0, a: 1}
+  m_AmbientEquatorColor: {r: 0.35686275, g: 0.34925446, b: 0.10588235, a: 1}
+  m_AmbientGroundColor: {r: 0.39607844, g: 0.39427048, b: 0.07450981, a: 1}
+  m_AmbientIntensity: 0
+  m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 2bd8959f5fbd3644aa33af1a155fc147, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: ddbcbb3899687ea469ed4a5fce1532df, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 0.265
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.41153073, g: 2.0649714, b: 0.6839721, a: 1}
+  m_IndirectSpecularColor: {r: 0.99999905, g: 0.74008965, b: 0.11051743, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -408,7 +408,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.99527514, b: 0.8254717, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -446,7 +446,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1783
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -475,7 +475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sun Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,7 +493,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.9940461, b: 0.8726415, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1.2
   m_Range: 10
   m_SpotAngle: 30
@@ -637,6 +637,54 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 717057778}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &745003327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 745003328}
+  - component: {fileID: 745003329}
+  m_Layer: 9
+  m_Name: PostFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &745003328
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745003327}
+  m_LocalRotation: {x: -0.14375162, y: -0, z: -0.000000014901161, w: 0.98961383}
+  m_LocalPosition: {x: 0, y: 229.26984, z: 809.42145}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 963194228}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &745003329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745003327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 97ff2858cb1ee2a4fa6e5ad17a4ed84e, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 1
 --- !u!1001 &824004578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -971,7 +1019,7 @@ GameObject:
   - component: {fileID: 941177606}
   - component: {fileID: 941177605}
   - component: {fileID: 941177604}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Islands
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1068,8 +1116,8 @@ Transform:
   m_Children:
   - {fileID: 828642280}
   - {fileID: 1022942610}
-  - {fileID: 52413888}
   - {fileID: 1032748871}
+  - {fileID: 52413888}
   - {fileID: 717057779}
   m_Father: {fileID: 51585404}
   m_RootOrder: 2
@@ -1085,6 +1133,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1109,7 +1158,7 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 1, g: 0.9673644, b: 0.4198113, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -1132,7 +1181,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
@@ -1153,10 +1202,71 @@ Transform:
   m_LocalRotation: {x: 0.14375162, y: -0, z: 0.000000014901161, w: 0.98961383}
   m_LocalPosition: {x: 0, y: 10.500001, z: -11.200001}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 745003328}
   m_Father: {fileID: 74986105}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 16.53, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 963194228}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 1
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 1
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1001 &1022942609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1327,7 +1437,7 @@ GameObject:
   - component: {fileID: 1085779658}
   - component: {fileID: 1085779657}
   - component: {fileID: 1085779656}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1997,7 +2107,32 @@ PrefabInstance:
     - target: {fileID: 1472835794796498921, guid: d7173da2ab8cc7d408c9d7f792b80422,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472835794796498921, guid: d7173da2ab8cc7d408c9d7f792b80422,
+        type: 3}
+      propertyPath: waterTile.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472835794796498921, guid: d7173da2ab8cc7d408c9d7f792b80422,
+        type: 3}
+      propertyPath: waterTile.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472835794796498921, guid: d7173da2ab8cc7d408c9d7f792b80422,
+        type: 3}
+      propertyPath: waterColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472835794796498921, guid: d7173da2ab8cc7d408c9d7f792b80422,
+        type: 3}
+      propertyPath: waterColor.g
+      value: 0.72062194
+      objectReference: {fileID: 0}
+    - target: {fileID: 1472835794796498921, guid: d7173da2ab8cc7d408c9d7f792b80422,
+        type: 3}
+      propertyPath: waterColor.r
+      value: 0.3066038
       objectReference: {fileID: 0}
     - target: {fileID: 1472835794796498921, guid: d7173da2ab8cc7d408c9d7f792b80422,
         type: 3}
