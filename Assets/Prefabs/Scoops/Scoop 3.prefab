@@ -7627,6 +7627,7 @@ GameObject:
   - component: {fileID: 7243622822668708862}
   - component: {fileID: -7187455769266779231}
   - component: {fileID: -7632408430695202834}
+  - component: {fileID: 1907301629525371339}
   m_Layer: 0
   m_Name: Scoop 3
   m_TagString: StackedScoop
@@ -7709,8 +7710,8 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4246101513740178112}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
+  m_IsTrigger: 0
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.7857047
   m_Center: {x: -0.0050283666, y: 0.003615887, z: -0.18}
@@ -7729,8 +7730,21 @@ MonoBehaviour:
   thickness: 0
   material: {fileID: 11400000, guid: 06e7bfec7795f448eb8800edc99dbcf2, type: 2}
   filter: -65534
-  m_SourceCollider: {fileID: 0}
+  m_SourceCollider: {fileID: -7187455769266779231}
   m_DistanceField: {fileID: 0}
+--- !u!65 &1907301629525371339
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4246101513740178112}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5714089, y: 1.5714093, z: 0.08441966}
+  m_Center: {x: -0.005028381, y: 0.0036158809, z: -0.18207404}
 --- !u!1 &4268203420485214512
 GameObject:
   m_ObjectHideFlags: 0

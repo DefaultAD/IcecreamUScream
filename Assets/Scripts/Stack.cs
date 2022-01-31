@@ -141,7 +141,7 @@ public class Stack : MonoBehaviour
         }
 
         //Destroy(cube);
-        stackObjects.RemoveAt(startPoint);
+        //stackObjects.RemoveAt(startPoint);
         
     }
 

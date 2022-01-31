@@ -21,6 +21,7 @@ public class ObstacleHit : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        GetComponent<Collider>().enabled = false;
         if (other.tag == "StackedScoop")
         {
             for (int i = 0; i < stack.stackObjects.Count; i++)
@@ -32,15 +33,18 @@ public class ObstacleHit : MonoBehaviour
                     //Destroy(stack.stackObjects[i]);
                     //other.gameObject.SetActive(false);
 
-                    //currentScoopHit = other.gameObject;
+                    //currentScoopHit = stack.stackObjects[i];
 
-                    //newCaughtScoop = Instantiate(currentScoopHit, currentScoopHit.transform.position, currentScoopHit.transform.rotation);
-                    //newCaughtScoop.transform.parent = this.gameObject.transform;
+                    newCaughtScoop = Instantiate(stack.stackObjects[i], this.gameObject.transform.position, stack.stackObjects[i].transform.rotation);
+                    newCaughtScoop.transform.parent = this.gameObject.transform;
+                    newCaughtScoop.transform.localPosition = new Vector3(0f, -0.02f, 0.175f);
 
-                    other.gameObject.SetActive(false);
+                    stack.stackObjects[i].gameObject.SetActive(false);
+                    Debug.Log("loop count");
+                    //break;
                 }
             }
-            GetComponent<Collider>().enabled = false;
+            //GetComponent<Collider>().enabled = false;
         }
     }
 }
