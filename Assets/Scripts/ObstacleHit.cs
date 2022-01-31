@@ -5,6 +5,8 @@ using UnityEngine;
 public class ObstacleHit : MonoBehaviour
 {
     public Stack stack;
+    private GameObject currentScoopHit;
+    private GameObject newCaughtScoop;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,13 @@ public class ObstacleHit : MonoBehaviour
                     stack.GetObjects(stack.stackObjects[i], i);
                     //stack.stackObjects.Remove(stack.stackObjects[i]);
                     //Destroy(stack.stackObjects[i]);
+                    //other.gameObject.SetActive(false);
+
+                    //currentScoopHit = other.gameObject;
+
+                    //newCaughtScoop = Instantiate(currentScoopHit, currentScoopHit.transform.position, currentScoopHit.transform.rotation);
+                    //newCaughtScoop.transform.parent = this.gameObject.transform;
+
                     other.gameObject.SetActive(false);
                 }
             }

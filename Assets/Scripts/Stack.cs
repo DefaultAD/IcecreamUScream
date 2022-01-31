@@ -26,6 +26,9 @@ public class Stack : MonoBehaviour
 
     public float camDistanceZ = 10;
 
+    private GameObject currentScoopHit;
+    private GameObject newCaughtScoop;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -137,7 +140,9 @@ public class Stack : MonoBehaviour
             stackObjects[i].transform.localPosition = newPosition;
         }
 
-        Destroy(cube);
+        //Destroy(cube);
+        stackObjects.RemoveAt(startPoint);
+        
     }
 
 }
