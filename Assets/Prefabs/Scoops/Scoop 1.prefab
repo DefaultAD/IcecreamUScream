@@ -1469,9 +1469,10 @@ GameObject:
   - component: {fileID: 7464858757101289293}
   - component: {fileID: 2598919804978725324}
   - component: {fileID: 4367183884192808618}
+  - component: {fileID: -4583976746910341796}
   m_Layer: 0
   m_Name: Scoop 1
-  m_TagString: Untagged
+  m_TagString: StackedScoop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1543,6 +1544,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-4583976746910341796
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943595905380001788}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.571409, y: 1.5714092, z: 1.1898061}
+  m_Center: {x: -0.0050283666, y: 0.0036158864, z: 0.0031401222}
 --- !u!1 &966227766402300550
 GameObject:
   m_ObjectHideFlags: 0
