@@ -7863,8 +7863,9 @@ GameObject:
   - component: {fileID: 5838027849155207825}
   - component: {fileID: 1336832219066113040}
   - component: {fileID: 722560018990818166}
+  - component: {fileID: 8738550664586113595}
   m_Layer: 0
-  m_Name: Scoop 1
+  m_Name: Scoop 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7877,14 +7878,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4288558659425253920}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.005028375, y: -0.0036158646, z: 2.942243}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7729, y: 1.7729, z: 1.7729}
   m_Children:
   - {fileID: 8406667700826383740}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!33 &1336832219066113040
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7912,7 +7913,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 84b2a582ab1bff545bfe92726c358e73, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7934,6 +7935,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8738550664586113595
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4288558659425253920}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.571409, y: 1.5714092, z: 1.1898061}
+  m_Center: {x: -0.0050283666, y: 0.0036158864, z: 0.0031401222}
 --- !u!1 &4320338596574832474
 GameObject:
   m_ObjectHideFlags: 0
