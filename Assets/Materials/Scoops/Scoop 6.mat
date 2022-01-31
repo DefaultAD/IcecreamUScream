@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 90.4, y: 22.91}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 729a2d6c3bece41448e72257aafb228d, type: 3}
+        m_Texture: {fileID: 2800000, guid: eb67ac70c81dafc499c595ba16006c5f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 90.4, y: 22.91}
     - _MetallicGlossMap:
@@ -73,6 +73,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 0.7636702, b: 0.6745283, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
