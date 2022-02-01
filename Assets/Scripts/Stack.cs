@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Stack : MonoBehaviour
 {
+    public CameraFollow cameraFollow;
+
     public GameObject previousTile;
     public GameObject currentTile;
 
@@ -120,17 +122,18 @@ public class Stack : MonoBehaviour
                 stackObjects.Add(currentTile);
                 currentTile.transform.parent = player.transform;
 
-                Camera.main.transform.position += new Vector3(0, 1.5f, 0);
+                //Camera.main.transform.position += new Vector3(0, 1.5f, 0);
                 camDistanceZ += 1.5f;
                 //Camera.main.transform.position -= new Vector3(0,0,5);
                 cherryTopping.transform.position += new Vector3(0, 1.5f, 0);
+                cameraFollow.camTarget.transform.position += new Vector3(0, 1.5f, 0);
             }
         }
     }
 
     public void GetObjects(GameObject cube,int startPoint)
     {
-        
+        cameraFollow.camTarget.transform.position -= new Vector3(0, 1.5f, 0);
         for (int i = startPoint; i < stackObjects.Count; i++)
         {
             float value = stackObjects[i].transform.localPosition.y - stackFallDistance;
