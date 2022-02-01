@@ -27,7 +27,7 @@ public class ObstacleHit : MonoBehaviour
             GetComponent<Collider>().enabled = false;
             for (int i = 0; i < stack.stackObjects.Count; i++)
             {
-                if (stack.stackObjects[i] == other.gameObject)
+                if (stack.stackObjects[i] == other.gameObject && newCaughtScoop == null)
                 {
                     stack.GetObjects(stack.stackObjects[i], i);
                     //stack.stackObjects.Remove(stack.stackObjects[i]);
@@ -42,17 +42,16 @@ public class ObstacleHit : MonoBehaviour
                         newCaughtScoop = Instantiate(stack.stackObjects[i], this.gameObject.transform.position, stack.stackObjects[i].transform.rotation);
                         newCaughtScoop.transform.parent = this.gameObject.transform;
                         newCaughtScoop.transform.localPosition = new Vector3(0f, -0.02f, 0.175f);
+                        stack.cherryTopping.transform.position -= new Vector3(0, 1.5f, 0);
                     }
                     if (this.gameObject.tag == "Tongue")
                     {
                         newCaughtScoop = Instantiate(stack.stackObjects[i], this.gameObject.transform.position, stack.stackObjects[i].transform.rotation);
                         newCaughtScoop.transform.parent = this.gameObject.transform;
                         newCaughtScoop.transform.localPosition = new Vector3(0f, 0.35f, 0f);
-                        foreach (var c in this.gameObject.GetComponentsInChildren<Collider>())
-                        {
-                            if (c.isTrigger) c.enabled = false;
-                        }
+                        stack.cherryTopping.transform.position -= new Vector3(0, 1.5f, 0);
                     }
+                    stack.camDistanceZ -= 1.5f;
 
                     stack.stackObjects[i].gameObject.SetActive(false);
                     Debug.Log("loop count");

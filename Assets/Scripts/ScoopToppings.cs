@@ -5,6 +5,10 @@ using UnityEngine;
 public class ScoopToppings : MonoBehaviour
 {
     public Stack stack;
+    public GameObject obiEmitter;
+    public GameObject origChocSauce;
+
+    private bool chocSpawn = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,24 +46,34 @@ public class ScoopToppings : MonoBehaviour
 
         if (other.tag == "SauceTrigger")
         {
+            obiEmitter.SetActive(true);
             Debug.Log("Sauce Trigger");
-            for (int i = 0; i < stack.stackObjects.Count; i++)
-            {
-                stack.stackObjects[i].transform.GetChild(2).gameObject.SetActive(true);
-                stack.stackObjects[i].transform.GetChild(2).gameObject.transform.Rotate(0, 0, Random.Range(0, 180));
-            }
+            StartCoroutine(chocSauceWait());
+            
             //GetComponent<Collider>().enabled = false;
         }
 
-        if (other.tag == "MellowTrigger")
+        //if (other.tag == "MellowTrigger")
+        //{
+        //    Debug.Log("Marshmellow Trigger");
+        //    for (int i = 0; i < stack.stackObjects.Count; i++)
+        //    {
+        //        stack.stackObjects[i].transform.GetChild(3).gameObject.SetActive(true);
+        //        stack.stackObjects[i].transform.GetChild(3).gameObject.transform.Rotate(0, 0, Random.Range(0, 180));
+        //    }
+        //    //GetComponent<Collider>().enabled = false;
+        //}
+
+        IEnumerator chocSauceWait()
         {
-            Debug.Log("Marshmellow Trigger");
-            for (int i = 0; i < stack.stackObjects.Count; i++)
+            yield return new WaitForSeconds(1f);
+            for (int i = 0; i < stack.stackObjects.Count - 1; i++)
             {
-                stack.stackObjects[i].transform.GetChild(3).gameObject.SetActive(true);
-                stack.stackObjects[i].transform.GetChild(3).gameObject.transform.Rotate(0, 0, Random.Range(0, 180));
+                obiEmitter.SetActive(true);
+                stack.stackObjects[i].transform.GetChild(2).gameObject.SetActive(true);
+                stack.stackObjects[i].transform.GetChild(2).gameObject.transform.Rotate(0, 0, Random.Range(0, 180));
+                origChocSauce.SetActive(true);
             }
-            //GetComponent<Collider>().enabled = false;
         }
     }
 }

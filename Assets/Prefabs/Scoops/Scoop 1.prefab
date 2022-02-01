@@ -7625,9 +7625,9 @@ GameObject:
   - component: {fileID: 8086755096293940511}
   - component: {fileID: 8639606957611122094}
   - component: {fileID: 7243622822668708862}
-  - component: {fileID: -8508226863467409380}
-  - component: {fileID: -8676715231248889570}
-  - component: {fileID: -2610894249757518879}
+  - component: {fileID: -45794798298871869}
+  - component: {fileID: 7443389966586757956}
+  - component: {fileID: 6682363048314041111}
   m_Layer: 0
   m_Name: Scoop 1
   m_TagString: StackedScoop
@@ -7702,7 +7702,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &-8508226863467409380
+--- !u!135 &-45794798298871869
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7711,11 +7711,11 @@ SphereCollider:
   m_GameObject: {fileID: 4246101513740178112}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.7857047
   m_Center: {x: -0.0050283666, y: 0.003615887, z: -0.18}
---- !u!114 &-8676715231248889570
+--- !u!114 &7443389966586757956
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7730,9 +7730,9 @@ MonoBehaviour:
   thickness: 0
   material: {fileID: 11400000, guid: 06e7bfec7795f448eb8800edc99dbcf2, type: 2}
   filter: -65534
-  m_SourceCollider: {fileID: -8508226863467409380}
+  m_SourceCollider: {fileID: -45794798298871869}
   m_DistanceField: {fileID: 0}
---- !u!65 &-2610894249757518879
+--- !u!65 &6682363048314041111
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7741,7 +7741,7 @@ BoxCollider:
   m_GameObject: {fileID: 4246101513740178112}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.5714089, y: 1.5714093, z: 0.08441966}
   m_Center: {x: -0.005028381, y: 0.0036158809, z: -0.18207404}
