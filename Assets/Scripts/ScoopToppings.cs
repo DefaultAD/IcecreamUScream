@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class ScoopToppings : MonoBehaviour
 {
+    public PlayerMovement playerMovement;
     public Stack stack;
     public GameObject obiEmitter;
     public GameObject origChocSauce;
+
+    public Transform iceCreamCarryPoint;
+    public bool isEnd = false;
 
     private bool chocSpawn = false;
     // Start is called before the first frame update
@@ -63,6 +67,15 @@ public class ScoopToppings : MonoBehaviour
         //    }
         //    //GetComponent<Collider>().enabled = false;
         //}
+
+        if (other.tag == "EndTrigger")
+        {
+            isEnd = true;
+            playerMovement.initialized = false;
+            Camera.main.transform.position += new Vector3(0, 5f, 0);
+            stack.player.transform.parent = iceCreamCarryPoint;
+            stack.player.transform.position = iceCreamCarryPoint.position;
+        }
 
         IEnumerator chocSauceWait()
         {

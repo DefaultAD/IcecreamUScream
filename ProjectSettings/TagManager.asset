@@ -13,6 +13,7 @@ TagManager:
   - MellowTrigger
   - Spoon
   - Tongue
+  - EndTrigger
   layers:
   - Default
   - TransparentFX
