@@ -42,7 +42,7 @@ Material:
     - _DownTex:
         m_Texture: {fileID: 2800000, guid: ee7baaa7136cd0a40a15c934e7f91c6b, type: 3}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 1}
+        m_Offset: {x: 0, y: 4.99}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
