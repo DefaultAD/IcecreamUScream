@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 0
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 1, g: 1, b: 1, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: ba7456c8f77257b4bb961e12a7bb327b, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: ddbcbb3899687ea469ed4a5fce1532df, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 0.265
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.9209775, g: 0.37254536, b: 0.012870179, a: 1}
+  m_IndirectSpecularColor: {r: 0.99999905, g: 0.69111156, b: 0.103962176, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -323,7 +323,7 @@ MonoBehaviour:
   movementSpeed: 15
   touchSensitivity: 0.0125
   movementLimit: 4.5
-  initialized: 1
+  initialized: 0
   cameraOffset: 1
 --- !u!4 &72007279
 Transform:
@@ -5043,6 +5043,7 @@ GameObject:
   m_Component:
   - component: {fileID: 660579779}
   - component: {fileID: 660579780}
+  - component: {fileID: 660579781}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5077,6 +5078,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skyboxRotation: 10
+--- !u!114 &660579781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660579778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c5c74acdce6fd2428d4137981c85a4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMovement: {fileID: 72007278}
 --- !u!1 &676849788 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4246101513740178112, guid: 0e1bfe3c332415045bd2520ceedee706,
