@@ -11,6 +11,8 @@ TagManager:
   - ChocSprinkleTrigger
   - SauceTrigger
   - MellowTrigger
+  - Spoon
+  - Tongue
   layers:
   - Default
   - TransparentFX
