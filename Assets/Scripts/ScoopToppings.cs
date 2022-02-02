@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ScoopToppings : MonoBehaviour
 {
+    public CameraFollow cameraFollow;
     public PlayerMovement playerMovement;
     public Stack stack;
     public GameObject obiEmitter;
@@ -13,6 +14,11 @@ public class ScoopToppings : MonoBehaviour
     public bool isEnd = false;
 
     private bool chocSpawn = false;
+
+    public GameObject confetti;
+    public GameObject confettiPoint;
+
+    public Transform charcterAnimated;
     // Start is called before the first frame update
     void Start()
     {
@@ -72,9 +78,20 @@ public class ScoopToppings : MonoBehaviour
         {
             isEnd = true;
             playerMovement.initialized = false;
-            Camera.main.transform.position += new Vector3(0, 5f, 0);
+            //Camera.main.transform.position += new Vector3(0, 5f, 0);
             stack.player.transform.parent = iceCreamCarryPoint;
             stack.player.transform.position = iceCreamCarryPoint.position;
+
+            cameraFollow.offset += new Vector3(5f, 10f, -20f);
+
+            // modify Main camera properties :
+            Camera.main.nearClipPlane = 0.05f;
+            Camera.main.farClipPlane = 1500f;
+            // Confetti particle
+            //confetti.SetActive(true);
+
+            //Animator animator = charcterAnimated.gameObject.GetComponent<Animator>();
+            //animator.runtimeAnimatorController = Resources.Load("Assets/Animations/Idle 2.controller") as RuntimeAnimatorController;
         }
 
         IEnumerator chocSauceWait()

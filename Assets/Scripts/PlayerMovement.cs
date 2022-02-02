@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 newPos = new Vector3(transform.position.x, transform.position.y, transform.position.z + (Time.deltaTime * movementSpeed));
             //Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, newPos.z - cameraOffset);
-            Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, newPos.z - stack.camDistanceZ); /////////////////////////// - stack.camDistanceZ    after newPos.z
+            //Camera.main.transform.position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, newPos.z - stack.camDistanceZ); /////////////////////////// - stack.camDistanceZ    after newPos.z
 
             transform.position = newPos;
 
