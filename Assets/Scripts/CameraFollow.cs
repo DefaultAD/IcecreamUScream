@@ -11,12 +11,13 @@ public class CameraFollow : MonoBehaviour
 
     public float smoothSpeed = 1f;
     public Vector3 offset;
+    public float offsetZ;
 
     public bool camMoved = false;
 
     private void Start()
     {
-        offset = new Vector3(0, 12f, -5f);
+        offset = new Vector3(0, 12f, offsetZ);
     }
 
     void Update()
